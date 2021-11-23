@@ -1,0 +1,51 @@
+#java 7
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+abstract class Arithmetic
+{
+  abstract int add(int p, int q);
+  abstract int subtract(int p, int q);
+  abstract int multiply(int p, int q);
+  abstract int divide(int p, int q);
+}
+
+//BODY STARTS HERE
+class Calculator extends Arithmetic{
+    int add(int p,int q)
+    {
+        return(p+q);
+    }
+    int subtract(int p,int q)
+    {
+        return(p-q);
+    }
+    int multiply(int p,int q)
+    {
+        return(p*q);
+    }
+    int divide(int p,int q)
+    {
+        return(p/q);
+    }
+}
+
+
+//BODY ENDS HERE
+
+
+public class Solution
+{
+  public static void main(String args[])
+  {
+    Calculator cal = new Calculator();
+       int A = 10, B = 5;
+       System.out.println("Addition Result : " + cal.add(A, B));
+    System.out.println("Subtraction Result : " + cal.subtract(A, B));
+    System.out.println("Multiplication Result : " + cal.multiply(A, B));
+    System.out.println("Division Result : " + cal.divide(A, B));
+  }
+}
